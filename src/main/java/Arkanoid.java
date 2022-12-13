@@ -89,7 +89,7 @@ public class Arkanoid implements ArkanoidConstants {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 
         arkanoidWindow.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-        arkanoidWindow.setLocation((int)dim.getHeight() / 3, (int)dim.getWidth() / 6);
+        arkanoidWindow.setLocation((int)dim.getHeight() / 2, (int)dim.getWidth() / 8);
         panel.setBorder(new TitledBorder(""));
         arkanoidWindow.getContentPane().setLayout(new BorderLayout());
         arkanoidWindow.getContentPane().add(panel, BorderLayout.CENTER);
@@ -184,7 +184,7 @@ public class Arkanoid implements ArkanoidConstants {
         levelShow.setText(String.valueOf(levelQuantity));
     }
 
-    private void initRandomBonus() {
+    private static void initRandomBonus() {
         Random r = new Random();
         byte count = 0;
 
@@ -285,6 +285,8 @@ public class Arkanoid implements ArkanoidConstants {
             }
         } catch(Exception e) {}
         currentLevelId++;
+
+        initRandomBonus();
     }
 
     static class DrawerPanel extends JComponent {
@@ -378,7 +380,7 @@ public class Arkanoid implements ArkanoidConstants {
         bonuses.trimToSize();
     }
 
-    class AddLife extends Bonus {
+    static class AddLife extends Bonus {
         AddLife() {
             img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusLife+.GIF");
         }
@@ -388,7 +390,7 @@ public class Arkanoid implements ArkanoidConstants {
         }
     }
 
-    class ReduceLife extends Bonus {
+    static class ReduceLife extends Bonus {
         ReduceLife() {
             img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusLife-.GIF");
         }
@@ -399,12 +401,12 @@ public class Arkanoid implements ArkanoidConstants {
             newRound();
         }
 
-        public void move() {
+        /*public void move() {
             y += 2;
-        }
+        }*/
     }
 
-    class IncreaseRadius extends Bonus {
+    static class IncreaseRadius extends Bonus {
         IncreaseRadius() {
             img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusRad+.GIF");
         }
@@ -419,7 +421,7 @@ public class Arkanoid implements ArkanoidConstants {
         }
     }
 
-    class WorsenRadius extends Bonus {
+    static class WorsenRadius extends Bonus {
         WorsenRadius() {
             img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusRad-.GIF");
         }
@@ -434,7 +436,7 @@ public class Arkanoid implements ArkanoidConstants {
         }
     }
 
-    class AddBall extends Bonus {
+    static class AddBall extends Bonus {
         AddBall() {
             img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusX2.GIF");
         }
@@ -448,7 +450,7 @@ public class Arkanoid implements ArkanoidConstants {
         }
     }
 
-    class SetSlowSpeed extends Bonus {
+    static class SetSlowSpeed extends Bonus {
         SetSlowSpeed() {
             img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusSpeed-.GIF");
         }
@@ -463,7 +465,7 @@ public class Arkanoid implements ArkanoidConstants {
         }
     }
 
-    class SetPromptSpeed extends Bonus {
+    static class SetPromptSpeed extends Bonus {
         SetPromptSpeed() {
             img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusSpeed+.GIF");
         }
@@ -477,7 +479,7 @@ public class Arkanoid implements ArkanoidConstants {
         }
     }
 
-    class IncreaseStick extends Bonus {
+    static class IncreaseStick extends Bonus {
         IncreaseStick() {
             img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusStick+.GIF");
         }
@@ -487,7 +489,7 @@ public class Arkanoid implements ArkanoidConstants {
         }
     }
 
-    class WorsenStick extends Bonus {
+    static class WorsenStick extends Bonus {
         WorsenStick() {
             img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusStick-.GIF");
         }
@@ -535,6 +537,7 @@ public class Arkanoid implements ArkanoidConstants {
         STICK_DEFAULT_SIZE = 80;
         timer.cancel();
         timer = new java.util.Timer();
+
     }
 
     private static void checkBallBorderLines() {
