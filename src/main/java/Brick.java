@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Brick {
     private Color color;
-    private Bonus bouns;
+    private Bonus bonus;
     private int type;
 
     private static Random rnd = new Random();
@@ -15,11 +15,11 @@ public class Brick {
     }
 
     public void setBonus(Bonus bonus) {
-        this.bouns = bonus;
+        this.bonus = bonus;
     }
 
     public Bonus getBonus() {
-        return (bouns != null) ? bouns : null;
+        return (bonus != null) ? bonus : null;
     }
 
     public void setColor(Color color) {
