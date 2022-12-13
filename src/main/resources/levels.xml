@@ -4,7 +4,7 @@
 		<level id="1" name="Classic">
   	   	   <brick y="2" x="1" color="0" type="0"/>
   	   	   <brick y="2" x="2" color="0" type="0"/>
-	           <brick y="2" x="3" color="0" type="0"/>
+	       <brick y="2" x="3" color="0" type="0"/>
 		   <brick y="2" x="4" color="0" type="0"/>
 		   <brick y="2" x="5" color="0" type="0"/>
 		   <brick y="2" x="6" color="0" type="0"/>
@@ -19,7 +19,7 @@
 
 		   <brick y="3" x="1" color="0" type="0"/>
   	   	   <brick y="3" x="2" color="0" type="0"/>
-	           <brick y="3" x="3" color="0" type="0"/>
+	       <brick y="3" x="3" color="0" type="0"/>
 		   <brick y="3" x="4" color="0" type="0"/>
 		   <brick y="3" x="5" color="0" type="0"/>
 		   <brick y="3" x="6" color="0" type="0"/>
@@ -33,7 +33,7 @@
 
 		   <brick y="4" x="1" color="0" type="0"/>
   	   	   <brick y="4" x="2" color="0" type="0"/>
-	           <brick y="4" x="3" color="0" type="0"/>
+	       <brick y="4" x="3" color="0" type="0"/>
 		   <brick y="4" x="4" color="0" type="0"/>
 		   <brick y="4" x="5" color="0" type="0"/>
 		   <brick y="4" x="6" color="0" type="0"/>
@@ -47,7 +47,7 @@
 
 		   <brick y="5" x="1" color="0" type="0"/>
   	   	   <brick y="5" x="2" color="0" type="0"/>
-	           <brick y="5" x="3" color="0" type="0"/>
+	       <brick y="5" x="3" color="0" type="0"/>
 		   <brick y="5" x="4" color="0" type="0"/>
 		   <brick y="5" x="5" color="0" type="0"/>
 		   <brick y="5" x="6" color="0" type="0"/>
