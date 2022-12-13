@@ -6,6 +6,6 @@ abstract class Bonus extends MovableElement {
     abstract public void execute();
 
     public void move() {
-        y += 1;
+        y += 0.3;
     }
 }
