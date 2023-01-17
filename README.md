@@ -7,7 +7,7 @@ The game has 4 levels that are described in levels.xml file.</br>
 You can add as many new levels as you like, but pay attention to xml syntax and (x,y) coords.
 
 Speed of ball increases over time.</br> 
-Game also has some bonuses like:
+Game also has some bonuses like:</br>
 <ul>
     <li>Life + / Life -</li>
     <li>Ball speed up / Ball speed down</li>
@@ -15,6 +15,8 @@ Game also has some bonuses like:
     <li>Increase / Decrease stick length</li>
     <li>Increase / Decrease ball radius</li>
 </ul>
+
+<br>
 
 Screenshots:
 ![Level 1](img/level1.png)
