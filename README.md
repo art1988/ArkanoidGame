@@ -14,6 +14,7 @@ Game also has some bonuses like:</br>
  - Increase / Decrease stick length
  - Increase / Decrease ball radius
 
+
 Screenshots:
 ![Level 1](img/level1.png)
 ![Level 2](img/level2.png)
