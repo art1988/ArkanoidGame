@@ -8,15 +8,11 @@ You can add as many new levels as you like, but pay attention to xml syntax and 
 
 Speed of ball increases over time.</br> 
 Game also has some bonuses like:</br>
-<ul>
-    <li>Life + / Life -</li>
-    <li>Ball speed up / Ball speed down</li>
-    <li>Add extra ball</li>
-    <li>Increase / Decrease stick length</li>
-    <li>Increase / Decrease ball radius</li>
-</ul>
-
-<br>
+ - Life + / Life -
+ - Ball speed up / Ball speed down
+ - Add extra ball
+ - Increase / Decrease stick length
+ - Increase / Decrease ball radius
 
 Screenshots:
 ![Level 1](img/level1.png)
