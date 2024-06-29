@@ -256,7 +256,9 @@ public class Arkanoid implements ArkanoidConstants {
             }
 
             currentLevelId = 1;
-        } catch(Exception e) {}
+        } catch(Exception e) {
+            System.out.println(e);
+        }
     }
 
     private static void loadBricks() {
