@@ -385,7 +385,7 @@ public class Arkanoid implements ArkanoidConstants {
 
     static class AddLife extends Bonus {
         AddLife() {
-            img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusLife+.GIF");
+            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusLife+.GIF");
         }
 
         public void execute() {
@@ -395,7 +395,7 @@ public class Arkanoid implements ArkanoidConstants {
 
     static class ReduceLife extends Bonus {
         ReduceLife() {
-            img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusLife-.GIF");
+            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusLife-.GIF");
         }
 
         public void execute() {
@@ -411,7 +411,7 @@ public class Arkanoid implements ArkanoidConstants {
 
     static class IncreaseRadius extends Bonus {
         IncreaseRadius() {
-            img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusRad+.GIF");
+            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusRad+.GIF");
         }
 
         public void execute() {
@@ -426,7 +426,7 @@ public class Arkanoid implements ArkanoidConstants {
 
     static class WorsenRadius extends Bonus {
         WorsenRadius() {
-            img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusRad-.GIF");
+            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusRad-.GIF");
         }
 
         public void execute() {
