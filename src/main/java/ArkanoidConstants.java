@@ -1,4 +1,4 @@
-import java.io.File;
+import java.net.URL;
 
 public interface ArkanoidConstants {
     int WINDOW_WIDTH = 650;
@@ -17,6 +17,5 @@ public interface ArkanoidConstants {
     int MAX_STICK_SIZE = 120;
     int MIN_STICK_SIZE = 40;
 
-
-    File levelsXMLFile = new File("src" + File.separator + "main" + File.separator + "resources" + File.separator + "levels.xml");
+    URL levels = ArkanoidConstants.class.getResource("/levels.xml");
 }

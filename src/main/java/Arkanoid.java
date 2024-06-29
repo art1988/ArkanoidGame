@@ -239,7 +239,7 @@ public class Arkanoid implements ArkanoidConstants {
         try {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(levelsXMLFile);
+            Document doc = docBuilder.parse(new File(levels.toURI()));
 
             doc.getDocumentElement().normalize();
 
@@ -266,7 +266,7 @@ public class Arkanoid implements ArkanoidConstants {
         try {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(levelsXMLFile);
+            Document doc = docBuilder.parse(new File(levels.toURI()));
 
             NodeList listOfBrick = doc.getElementsByTagName("brick");
 
