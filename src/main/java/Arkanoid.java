@@ -14,6 +14,8 @@ import java.awt.image.BufferedImage;
 import java.awt.image.ConvolveOp;
 import java.awt.image.Kernel;
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -189,25 +191,31 @@ public class Arkanoid implements ArkanoidConstants {
         Random r = new Random();
         byte count = 0;
 
-        while(count != 10) {
-            int y = r.nextInt(4) + 2,
-                x = r.nextInt(12) + 1;
-            if(arkanoidMap[y][x].hasBrick() == true) {
-                switch((int)(Math.random()*9)) {
-                    case 0: arkanoidMap[y][x].getBrick().setBonus(new AddLife()); break;
-                    case 1: arkanoidMap[y][x].getBrick().setBonus(new ReduceLife()); break;
-                    case 2: arkanoidMap[y][x].getBrick().setBonus(new IncreaseRadius()); break;
-                    case 3: arkanoidMap[y][x].getBrick().setBonus(new AddBall()); break;
-                    case 4: arkanoidMap[y][x].getBrick().setBonus(new WorsenRadius()); break;
-                    case 5: arkanoidMap[y][x].getBrick().setBonus(new SetSlowSpeed()); break;
-                    case 6: arkanoidMap[y][x].getBrick().setBonus(new SetPromptSpeed()); break;
-                    case 7: arkanoidMap[y][x].getBrick().setBonus(new IncreaseStick()); break;
-                    case 8: arkanoidMap[y][x].getBrick().setBonus(new WorsenStick()); break;
+        try {
+            while(count != 10) {
+                int y = r.nextInt(4) + 2,
+                    x = r.nextInt(12) + 1;
+                if(arkanoidMap[y][x].hasBrick() == true) {
+                    switch((int)(Math.random()*9)) {
+                        case 0: arkanoidMap[y][x].getBrick().setBonus(new AddLife()); break;
+                        case 1: arkanoidMap[y][x].getBrick().setBonus(new ReduceLife()); break;
+                        case 2: arkanoidMap[y][x].getBrick().setBonus(new IncreaseRadius()); break;
+                        case 3: arkanoidMap[y][x].getBrick().setBonus(new AddBall()); break;
+                        case 4: arkanoidMap[y][x].getBrick().setBonus(new WorsenRadius()); break;
+                        case 5: arkanoidMap[y][x].getBrick().setBonus(new SetSlowSpeed()); break;
+                        case 6: arkanoidMap[y][x].getBrick().setBonus(new SetPromptSpeed()); break;
+                        case 7: arkanoidMap[y][x].getBrick().setBonus(new IncreaseStick()); break;
+                        case 8: arkanoidMap[y][x].getBrick().setBonus(new WorsenStick()); break;
+                    }
+                    count++;
+                } else {
+                    continue;
                 }
-                count++;
-            } else {
-                continue;
             }
+        }
+        catch (java.io.UnsupportedEncodingException e)
+        {
+            throw new RuntimeException(e);
         }
     }
 
@@ -384,8 +392,11 @@ public class Arkanoid implements ArkanoidConstants {
     }
 
     static class AddLife extends Bonus {
-        AddLife() {
-            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusLife+.GIF");
+        AddLife() throws UnsupportedEncodingException
+        {
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusLife+.GIF").getPath().substring(1), "UTF-8");
+
+            img = new ImageIcon(decoded);
         }
 
         public void execute() {
@@ -394,8 +405,11 @@ public class Arkanoid implements ArkanoidConstants {
     }
 
     static class ReduceLife extends Bonus {
-        ReduceLife() {
-            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusLife-.GIF");
+        ReduceLife() throws UnsupportedEncodingException
+        {
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusLife-.GIF").getPath().substring(1), "UTF-8");
+
+            img = new ImageIcon(decoded);
         }
 
         public void execute() {
@@ -410,8 +424,11 @@ public class Arkanoid implements ArkanoidConstants {
     }
 
     static class IncreaseRadius extends Bonus {
-        IncreaseRadius() {
-            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusRad+.GIF");
+        IncreaseRadius() throws UnsupportedEncodingException
+        {
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusRad+.GIF").getPath().substring(1), "UTF-8");
+
+            img = new ImageIcon(decoded);
         }
 
         public void execute() {
@@ -425,8 +442,11 @@ public class Arkanoid implements ArkanoidConstants {
     }
 
     static class WorsenRadius extends Bonus {
-        WorsenRadius() {
-            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusRad-.GIF");
+        WorsenRadius() throws UnsupportedEncodingException
+        {
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusRad-.GIF").getPath().substring(1), "UTF-8");
+
+            img = new ImageIcon(decoded);
         }
 
         public void execute() {
@@ -440,8 +460,11 @@ public class Arkanoid implements ArkanoidConstants {
     }
 
     static class AddBall extends Bonus {
-        AddBall() {
-            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusX2.GIF");
+        AddBall() throws UnsupportedEncodingException
+        {
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusX2.GIF").getPath().substring(1), "UTF-8");
+
+            img = new ImageIcon(decoded);
         }
 
         public void execute() {
@@ -454,8 +477,11 @@ public class Arkanoid implements ArkanoidConstants {
     }
 
     static class SetSlowSpeed extends Bonus {
-        SetSlowSpeed() {
-            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusSpeed-.GIF");
+        SetSlowSpeed() throws UnsupportedEncodingException
+        {
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusSpeed-.GIF").getPath().substring(1), "UTF-8");
+
+            img = new ImageIcon(decoded);
         }
 
         public void execute() {
@@ -469,8 +495,11 @@ public class Arkanoid implements ArkanoidConstants {
     }
 
     static class SetPromptSpeed extends Bonus {
-        SetPromptSpeed() {
-            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusSpeed+.GIF");
+        SetPromptSpeed() throws UnsupportedEncodingException
+        {
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusSpeed+.GIF").getPath().substring(1), "UTF-8");
+
+            img = new ImageIcon(decoded);
         }
 
         public void execute() {
@@ -483,8 +512,11 @@ public class Arkanoid implements ArkanoidConstants {
     }
 
     static class IncreaseStick extends Bonus {
-        IncreaseStick() {
-            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusStick+.GIF");
+        IncreaseStick() throws UnsupportedEncodingException
+        {
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusStick+.GIF").getPath().substring(1), "UTF-8");
+
+            img = new ImageIcon(decoded);
         }
 
         public void execute() {
@@ -493,8 +525,11 @@ public class Arkanoid implements ArkanoidConstants {
     }
 
     static class WorsenStick extends Bonus {
-        WorsenStick() {
-            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusStick-.GIF");
+        WorsenStick() throws UnsupportedEncodingException
+        {
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusStick-.GIF").getPath().substring(1), "UTF-8");
+
+            img = new ImageIcon(decoded);
         }
 
         public void execute() {
