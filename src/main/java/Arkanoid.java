@@ -13,6 +13,7 @@ import java.awt.event.MouseMotionAdapter;
 import java.awt.image.BufferedImage;
 import java.awt.image.ConvolveOp;
 import java.awt.image.Kernel;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -257,7 +258,7 @@ public class Arkanoid implements ArkanoidConstants {
 
             currentLevelId = 1;
         } catch(Exception e) {
-            System.out.println(e);
+            System.err.println(e);
         }
     }
 
@@ -440,7 +441,7 @@ public class Arkanoid implements ArkanoidConstants {
 
     static class AddBall extends Bonus {
         AddBall() {
-            img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusX2.GIF");
+            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusX2.GIF");
         }
 
         public void execute() {
@@ -454,7 +455,7 @@ public class Arkanoid implements ArkanoidConstants {
 
     static class SetSlowSpeed extends Bonus {
         SetSlowSpeed() {
-            img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusSpeed-.GIF");
+            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusSpeed-.GIF");
         }
 
         public void execute() {
@@ -469,7 +470,7 @@ public class Arkanoid implements ArkanoidConstants {
 
     static class SetPromptSpeed extends Bonus {
         SetPromptSpeed() {
-            img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusSpeed+.GIF");
+            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusSpeed+.GIF");
         }
 
         public void execute() {
@@ -483,7 +484,7 @@ public class Arkanoid implements ArkanoidConstants {
 
     static class IncreaseStick extends Bonus {
         IncreaseStick() {
-            img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusStick+.GIF");
+            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusStick+.GIF");
         }
 
         public void execute() {
@@ -493,7 +494,7 @@ public class Arkanoid implements ArkanoidConstants {
 
     static class WorsenStick extends Bonus {
         WorsenStick() {
-            img = new ImageIcon(System.getProperty("user.dir") + "/src/main/resources/bonusStick-.GIF");
+            img = new ImageIcon(System.getProperty("user.dir") + File.separator + "bonusStick-.GIF");
         }
 
         public void execute() {
