@@ -18,6 +18,5 @@ public interface ArkanoidConstants {
     int MIN_STICK_SIZE = 40;
 
 
-    File levelsXMLFile = new File(System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" +
-            File.separator + "resources" + File.separator + "levels.xml");
+    File levelsXMLFile = new File("src" + File.separator + "main" + File.separator + "resources" + File.separator + "levels.xml");
 }
