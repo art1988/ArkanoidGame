@@ -394,7 +394,7 @@ public class Arkanoid implements ArkanoidConstants {
     static class AddLife extends Bonus {
         AddLife() throws UnsupportedEncodingException
         {
-            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusLife+.GIF").getPath().substring(1), "UTF-8");
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusLifeIncrease.GIF").getPath().substring(1), "UTF-8");
 
             img = new ImageIcon(decoded);
         }
@@ -407,7 +407,7 @@ public class Arkanoid implements ArkanoidConstants {
     static class ReduceLife extends Bonus {
         ReduceLife() throws UnsupportedEncodingException
         {
-            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusLife-.GIF").getPath().substring(1), "UTF-8");
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusLifeDecrease.GIF").getPath().substring(1), "UTF-8");
 
             img = new ImageIcon(decoded);
         }
@@ -426,8 +426,7 @@ public class Arkanoid implements ArkanoidConstants {
     static class IncreaseRadius extends Bonus {
         IncreaseRadius() throws UnsupportedEncodingException
         {
-            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusRad+.GIF").getPath().substring(1), "UTF-8");
-
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("bonusRadIncrease.GIF").getPath().substring(1), "UTF-8");
             img = new ImageIcon(decoded);
         }
 
@@ -444,7 +443,7 @@ public class Arkanoid implements ArkanoidConstants {
     static class WorsenRadius extends Bonus {
         WorsenRadius() throws UnsupportedEncodingException
         {
-            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusRad-.GIF").getPath().substring(1), "UTF-8");
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusRadDecrease.GIF").getPath().substring(1), "UTF-8");
 
             img = new ImageIcon(decoded);
         }
@@ -479,7 +478,7 @@ public class Arkanoid implements ArkanoidConstants {
     static class SetSlowSpeed extends Bonus {
         SetSlowSpeed() throws UnsupportedEncodingException
         {
-            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusSpeed-.GIF").getPath().substring(1), "UTF-8");
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusSpeedDecrease.GIF").getPath().substring(1), "UTF-8");
 
             img = new ImageIcon(decoded);
         }
@@ -497,7 +496,7 @@ public class Arkanoid implements ArkanoidConstants {
     static class SetPromptSpeed extends Bonus {
         SetPromptSpeed() throws UnsupportedEncodingException
         {
-            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusSpeed+.GIF").getPath().substring(1), "UTF-8");
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusSpeedIncrease.GIF").getPath().substring(1), "UTF-8");
 
             img = new ImageIcon(decoded);
         }
@@ -514,7 +513,7 @@ public class Arkanoid implements ArkanoidConstants {
     static class IncreaseStick extends Bonus {
         IncreaseStick() throws UnsupportedEncodingException
         {
-            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusStick+.GIF").getPath().substring(1), "UTF-8");
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusStickIncrease.GIF").getPath().substring(1), "UTF-8");
 
             img = new ImageIcon(decoded);
         }
@@ -527,7 +526,7 @@ public class Arkanoid implements ArkanoidConstants {
     static class WorsenStick extends Bonus {
         WorsenStick() throws UnsupportedEncodingException
         {
-            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusStick-.GIF").getPath().substring(1), "UTF-8");
+            String decoded = URLDecoder.decode(Arkanoid.class.getResource("/bonusStickDecrease.GIF").getPath().substring(1), "UTF-8");
 
             img = new ImageIcon(decoded);
         }
